@@ -26,3 +26,8 @@ logs/
 bin/cloudflared
 PUBLIC_URL.txt
 *.pid
+
+.env
+.env.*
+!.env.example
+*.pem
