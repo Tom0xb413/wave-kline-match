@@ -1,0 +1,11 @@
+services:
+  wave:
+    build: .
+    ports:
+      - "18765:18765"
+    volumes:
+      - kline-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  kline-data:

@@ -1,0 +1,183 @@
+# V1 匹配宇宙。primary 仅表示入库优先级与匹配读取的主序列，不加权相似度。
+# native_symbol 可为字符串或候选列表；Gate 会对照交易对/合约列表解析，禁止盲写不存在的合约。
+
+timeframes: [1H, 4H, 12H, 1D]
+default_n: 30
+topk: 10
+
+# 历史深度（尽力而为）。1D 拉全量。
+depths:
+  1H: 2y
+  4H: 3y
+  12H: 5y
+  1D: full
+
+assets:
+  # ---- 加密货币：Binance USDT 现货为主序列 ----
+  - id: BTC
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: BTCUSDT, primary: true}
+      - {venue: okx, native_symbol: BTC-USDT, primary: false}
+      - {venue: gate, native_symbol: BTC_USDT, primary: false}
+
+  - id: ETH
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: ETHUSDT, primary: true}
+      - {venue: okx, native_symbol: ETH-USDT, primary: false}
+      - {venue: gate, native_symbol: ETH_USDT, primary: false}
+
+  - id: SOL
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: SOLUSDT, primary: true}
+      - {venue: okx, native_symbol: SOL-USDT, primary: false}
+      - {venue: gate, native_symbol: SOL_USDT, primary: false}
+
+  - id: BNB
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: BNBUSDT, primary: true}
+      - {venue: okx, native_symbol: BNB-USDT, primary: false}
+      - {venue: gate, native_symbol: BNB_USDT, primary: false}
+
+  - id: XRP
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: XRPUSDT, primary: true}
+      - {venue: okx, native_symbol: XRP-USDT, primary: false}
+      - {venue: gate, native_symbol: XRP_USDT, primary: false}
+
+  - id: DOGE
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: DOGEUSDT, primary: true}
+      - {venue: okx, native_symbol: DOGE-USDT, primary: false}
+      - {venue: gate, native_symbol: DOGE_USDT, primary: false}
+
+  - id: ADA
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: ADAUSDT, primary: true}
+      - {venue: okx, native_symbol: ADA-USDT, primary: false}
+      - {venue: gate, native_symbol: ADA_USDT, primary: false}
+
+  - id: LINK
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: LINKUSDT, primary: true}
+      - {venue: okx, native_symbol: LINK-USDT, primary: false}
+      - {venue: gate, native_symbol: LINK_USDT, primary: false}
+
+  - id: AVAX
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: AVAXUSDT, primary: true}
+      - {venue: okx, native_symbol: AVAX-USDT, primary: false}
+      - {venue: gate, native_symbol: AVAX_USDT, primary: false}
+
+  - id: SUI
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: SUIUSDT, primary: true}
+      - {venue: okx, native_symbol: SUI-USDT, primary: false}
+      - {venue: gate, native_symbol: SUI_USDT, primary: false}
+
+  - id: PEPE
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: PEPEUSDT, primary: true}
+      - {venue: okx, native_symbol: PEPE-USDT, primary: false}
+      - {venue: gate, native_symbol: PEPE_USDT, primary: false}
+
+  - id: UNI
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: UNIUSDT, primary: true}
+      - {venue: okx, native_symbol: UNI-USDT, primary: false}
+      - {venue: gate, native_symbol: UNI_USDT, primary: false}
+
+  - id: LTC
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: LTCUSDT, primary: true}
+      - {venue: okx, native_symbol: LTC-USDT, primary: false}
+      - {venue: gate, native_symbol: LTC_USDT, primary: false}
+
+  - id: BCH
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: BCHUSDT, primary: true}
+      - {venue: okx, native_symbol: BCH-USDT, primary: false}
+      - {venue: gate, native_symbol: BCH_USDT, primary: false}
+
+  - id: DOT
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: DOTUSDT, primary: true}
+      - {venue: okx, native_symbol: DOT-USDT, primary: false}
+      - {venue: gate, native_symbol: DOT_USDT, primary: false}
+
+  - id: ATOM
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: ATOMUSDT, primary: true}
+      - {venue: okx, native_symbol: ATOM-USDT, primary: false}
+      - {venue: gate, native_symbol: ATOM_USDT, primary: false}
+
+  - id: NEAR
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: NEARUSDT, primary: true}
+      - {venue: okx, native_symbol: NEAR-USDT, primary: false}
+      - {venue: gate, native_symbol: NEAR_USDT, primary: false}
+
+  - id: APT
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: APTUSDT, primary: true}
+      - {venue: okx, native_symbol: APT-USDT, primary: false}
+      - {venue: gate, native_symbol: APT_USDT, primary: false}
+
+  - id: TAO
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: TAOUSDT, primary: true}
+      - {venue: okx, native_symbol: TAO-USDT, primary: false}
+      - {venue: gate, native_symbol: TAO_USDT, primary: false}
+
+  - id: TRX
+    class: crypto
+    venues:
+      - {venue: binance, native_symbol: TRXUSDT, primary: true}
+      - {venue: okx, native_symbol: TRX-USDT, primary: false}
+      - {venue: gate, native_symbol: TRX_USDT, primary: false}
+
+  # ---- 黄金：OKX XAUT-USDT 为主序列（Gate 现货无 XAU_USDT）。Binance PAXG 备份。 ----
+  - id: XAU
+    class: gold
+    venues:
+      - {venue: okx, native_symbol: XAUT-USDT, primary: true}
+      - {venue: binance, native_symbol: PAXGUSDT, primary: false}
+
+  # ---- Gate xStocks。跳过 NAS100/SPX500/US30（现货 404）。 ----
+  - id: NVDA
+    class: tradfi
+    venues:
+      - {venue: gate, native_symbol: [NVDAX_USDT, NVDA_USDT], primary: true}
+
+  - id: TSLA
+    class: tradfi
+    venues:
+      - {venue: gate, native_symbol: [TSLAX_USDT, TSLA_USDT], primary: true}
+
+  - id: AAPL
+    class: tradfi
+    venues:
+      - {venue: gate, native_symbol: [AAPLX_USDT, AAPL_USDT], primary: true}
+
+  - id: GOOGL
+    class: tradfi
+    venues:
+      - {venue: gate, native_symbol: [GOOGLX_USDT, GOOGL_USDT], primary: true}

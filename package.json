@@ -1,0 +1,9 @@
+{
+  "name": "kline-match-terminal",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm --prefix web install && npm --prefix web run build",
+    "start": "python3 -m kline_match serve --host 0.0.0.0 --port 18765"
+  }
+}
